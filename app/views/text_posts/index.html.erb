@@ -1,0 +1,20 @@
+<%= @text_posts.each do |textpost| %>
+
+<%= div_for textpost do %>
+..........
+..........
+
+<p>
+<%= link_to "Show", text_post_path(textpost) %> | 
+    
+</p>
+
+<p><%= link_to "Back", text_posts_path %></p>
+
+<% end %>
+
+<%# <%= content_tag :h2, text_post.description %>
+
+<% end %>
+
+</div>

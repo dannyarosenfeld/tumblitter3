@@ -12,7 +12,13 @@
     <h1 class='pull-left'>Tumblful</h1>
   </a>
   <%= button_to("Sign out", destroy_user_session_path, :method => :delete, :class => "pull-right") if user_signed_in? %>
+ <ul><li> <%= link_to "All image links", image_links_path %></li></ul>
+ <li><%= link_to "All TextPosts", text_posts_path %></li>
+  <ul>
+    <li><%= link_to "Home", root_path %></li>
+  </ul>
 </nav>
+    <%= link_to "Back", text_posts_path %>
 <%= notices %>
 <div class='main-content'>
   <%= yield %>
