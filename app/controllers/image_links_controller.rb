@@ -8,7 +8,7 @@ class ImageLinksController < ApplicationController
     end
 
     def new
-
+        @image_link = ImageLink.new
     end
 
     def edit
