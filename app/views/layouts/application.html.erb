@@ -18,6 +18,9 @@
     <li><%= link_to "Home", root_path %></li>
   </ul>
 </nav>
+    <%if user_signed_in? %>
+    <p>welcome <%= User.name %></p>
+    <% end %>
     <%= link_to "Back", text_posts_path %>
 <%= notices %>
 <div class='main-content'>

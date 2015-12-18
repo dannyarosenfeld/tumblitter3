@@ -4,4 +4,5 @@ class ImageLink < ActiveRecord::Base
     belongs_to :user
     validates_presence_of :url
    
+   has_many :likes, as: :likeable
 end
