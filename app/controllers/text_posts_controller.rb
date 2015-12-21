@@ -9,7 +9,7 @@ class TextPostsController < ApplicationController
     end
 
     def new
-
+         @text_post = TextPost.new
     end
 
     def edit

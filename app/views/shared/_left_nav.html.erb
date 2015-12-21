@@ -1,12 +1,14 @@
-<ul>
+<ul class="center">
   <li>
     <%= content_tag :strong, current_user.name %>
   </li>
   <li>
     <%= content_tag :small, '@'+current_user.username %>
   </li>
-  <li>
-    <table>
+</ul>
+
+
+    <table class="center">
       <tbody>
         <tr>
           <td>
@@ -23,8 +25,7 @@
           </td>
       </tbody>
     </table>
-  </li>
-</ul>
+ 
 
 <ul>
   <%= nav_item("Follow", follows_path) %>

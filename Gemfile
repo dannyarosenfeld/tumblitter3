@@ -1,16 +1,22 @@
 source 'https://rubygems.org'
 
 # Declare the ruby version to use: http://bundler.io/v1.3/gemfile.html
-ruby '2.1.5'
+ruby '2.1.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.7'
 
+gem 'sprockets-rails', '2.1.3'
 # Use sqlite3 as the database for Active Record
+
+
 gem 'sqlite3'
 
+
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -40,6 +46,10 @@ end
 
 # Use Devise for authentication: https://github.com/plataformatec/devise#getting-started
 gem 'devise'
+
+
+
+
 
 group :development, :test do
   # Use RSpec for testing: https://github.com/rspec/rspec-rails
