@@ -8,15 +8,18 @@
 </head>
 <body>
 <%= render 'layouts/header' %>
+<%#
     <%if user_signed_in? %>
-    <p>welcome <%= User.name %></p>
-    <% end %>
-    <%= link_to "Back", text_posts_path %>
+   <%# <p>welcome <%= User.name %></p>
+  <%#  <% end %>
+  <%#  <%= link_to "Back", text_posts_path %>
 <%= notices %>
 <div id="main_content" class='main-content'>
   <h1 id="header"> Tumblful </h1>
 
   <%= yield %>
+
+  <%= render 'layouts/footer' %>
 </div>
 </body>
 </html>

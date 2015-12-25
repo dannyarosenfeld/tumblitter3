@@ -25,7 +25,7 @@ body {
 }
 
 nav {
-  background-image: image-url('twitter_web_sprite_bgs.png');
+  /*background-image: image-url('twitter_web_sprite_bgs.png'); */
   background-repeat: repeat-x;
   min-height: 40px !important;
 }
@@ -50,7 +50,7 @@ a.page-title:visited {
 }
 
 .bird-topbar-blue {
-  background-image: image-url('twetter-logo.png');
+  /* background-image: image-url('twetter-logo.png'); */
   background-position: 0 0;
   width: 24px;
   height: 21px;
@@ -113,6 +113,7 @@ a.page-title:visited {
 .panel form .form-group input.left {
   width: 68%;
   float: left;
+  
 }
 
 .panel form .form-group .btn.btn-warning {
@@ -159,7 +160,7 @@ a.page-title:visited {
 
 .alert-float {
   position: fixed;
-  top: 0;
+  top: 4em;
   z-index: 1050;
   color: white;
   width: 50%;
