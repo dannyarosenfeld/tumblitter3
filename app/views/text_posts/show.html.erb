@@ -1,6 +1,6 @@
 
  <h2><%= @text_post.name %></h2>
   <p><%= @text_post.description %></p>
-  <%= link_to "Destroy", text_post_path, method: :delete, data: {confirm: "forreal?"}, class: "btn btn-default" %>
+  <%= link_to "Delete", text_posts_path, method: :delete, data: {confirm: "forreal?"}, class: "btn btn-default" %>
   <%= link_to "Delete", text_posts_path, method: :delete %>
 <p><%= link_to "Back", text_posts_path %></p>

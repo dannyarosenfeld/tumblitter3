@@ -27,7 +27,7 @@ class ImageLinksController < ApplicationController
 
     def update
         @image_link = ImageLink.find(params[:id])
-    if  @image_link.update(link: params[:image_link][:url], title: params[:image_link][:title])
+    if  @image_link.update(url: params[:image_link][:url], title: params[:image_link][:title])
         redirect_to image_links_path
     else
         @errors = @image_link.errors
