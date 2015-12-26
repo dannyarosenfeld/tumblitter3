@@ -1,36 +1,55 @@
 
-<div id="image_links_back">
+
 
 <% @image_links.each do |image_link| %>
-<div class="text_post_upper">
+
+  <%= div_for image_link do %>
+   <div class="text_post_upper"> 
   <h2><%= image_link.title %></h2>
 </div>
   
   
-  <span>
+  
   <%= image_tag image_link.url, :class => 'image-link-image thumbnail', :id => 'centerimg' %>
-  </span>
+  
 
 
-<div class="text_post_box text_post_center">
+
 <%# <% @image_links.each do |image_link| %>
  <%#  <%= content_tag :p, image_link.url %>
 <%# <% end %>
 
-
-  <span class='likes pull-left'>
-  <%= image_link.likes.count %> likes
-  <%= link_to "edit", edit_image_link_path(image_link) %>
-  </span>
+ <div class="text_post_box text_post_center"> 
+  <div class='likes pull-left'>
+    <span class="total-likes">
+  <%= image_link.likes.count %>
+    </span> 
+  </div>
 
   
+<%# <%= link_to "edit", edit_image_link_path(image_link) %>
+  
 
-  <%= form_for Like.new do |f| %>
+  <%= form_for Like.new, :remote => true do |f| %>
     <%= f.hidden_field :likeable_type, :value => image_link.class %>
     <%= f.hidden_field :likeable_id, :value => image_link.id %>
     <%= f.hidden_field :user_id, :value => current_user.id %>
     <%= f.submit "Like" %>
-</div>
+ </div> 
   <% end %>
  <% end %>
-</div>
+ <% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
