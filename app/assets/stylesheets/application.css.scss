@@ -19,11 +19,146 @@
 
 html, body {
 	font-family: 'Raleway', sans-serif;
+
 }
+
+#main_back{
+ /* Location of the image */
+  background-image: image-url('city_lights.jpg');
+  
+  /* Background image is centered vertically and horizontally at all times */
+  background-position: center center;
+  
+  /* Background image doesn't tile */
+  background-repeat: no-repeat;
+  
+  /* Background image is fixed in the viewport so that it doesn't move when 
+     the content's height is greater than the image's height */
+  background-attachment: fixed;
+  
+  /* This is what makes the background image rescale based
+     on the container's size */
+  background-size: cover;
+  
+  /* Set a background color that will be displayed
+     while the background image is loading */
+  background-color: #464646;
+
+}
+
+.whitey {
+
+background-color:rgba(192,192,192,0.85);
+
+border-radius: 10px;
+
+
+}
+
+.user_info{
+
+background-color:rgba(192,192,192,0.85);
+
+border-radius: 5px;
+
+
+
+}
+
+.padback {
+padding: 30px;
+background-color:white;
+
+}
+
+
+.opaque {
+  /* Theoretically for IE 8 & 9 (more valid) */
+  /* ...but not required as filter works too */
+  /* should come BEFORE filter */
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; // IE8
+
+  /* This works in IE 8 & 9 too */
+  /* ... but also 5, 6, 7 */
+  filter: alpha(opacity=50); // IE 5-7
+  
+  /* Modern Browsers */
+  opacity: 0.5;
+}
+
+
+#text_posts_back {
+background: #345212;
+
+}
+.text_post_box{
+	
+background-color:rgba(192,192,192,0.85);
+
+border-radius: 5px;
+img{
+margin: 0 auto;
+width: 400px;
+float: left;
+
+
+}
+
+}
+.text_post_upper {
+	background: white;
+	width: 400px;
+	 margin:0 auto;
+	 border-top-left-radius: 20px;
+	 border-top-right-radius: 20px;
+}
+
+
+
+.text_post_center{
+  	width: 400px;
+    margin:0 auto;
+    text-align:left;
+    padding: 40px;
+    margin-bottom: 3em;
+
+    img {
+
+	margin-left:3em;
+	
+
+
+    }
+    h2 {
+		border-bottom: 10px green solid;
+	
+    }
+
+    p {
+		width: 100px;
+
+
+    }
+}
+
+
+
+
+
+#image_links_back {
+background: orange;
+
+
+}
+
 
 
 input {
 margin-bottom: 0.3em;
+border-radius: 3px;
+padding: 5px;
+border: 2px solid white;
+opacity: .8;
 
 
 }
@@ -33,10 +168,17 @@ h1, h2, h3, h4, h5, h6 {
 	text-align: center;
 }
 
+small {
+margin-left: 15px;
+
+
+}
+
 .center{
-    width:200px;
+    width: 300px;
     margin:0 auto;
     text-align:left;
+    padding: 20px;
 }
 
 

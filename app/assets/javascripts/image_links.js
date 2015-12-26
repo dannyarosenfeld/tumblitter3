@@ -4,13 +4,18 @@
 
 
 function makeBig() {
+  
   $(this).removeClass('thumbnail');
   $(this).addClass('large-image');
+   
 }
 
 function makeSmall() {
+  
   $(this).addClass('thumbnail');
   $(this).removeClass('large-image');
+  
+
 }
 
 

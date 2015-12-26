@@ -6,7 +6,7 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body id="main_back">
 <%= render 'layouts/header' %>
 <%#
     <%if user_signed_in? %>
@@ -16,9 +16,9 @@
 <%= notices %>
 <div id="main_content" class='main-content'>
   <h1 id="header"> Tumblful </h1>
-
+<div id="whitey">
   <%= yield %>
-
+</div>
   <%= render 'layouts/footer' %>
 </div>
 </body>

@@ -42,6 +42,12 @@ class TextPostsController < ApplicationController
         redirect_to text_posts_path
     end
        
+    def destroy
+        
+        @text_post.destroy
+        redirect_to text_posts_path
+    
+    end
     private
   def text_post_params
     params.require(:text_post).permit(:description, :name)
