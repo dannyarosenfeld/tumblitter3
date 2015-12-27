@@ -113,7 +113,12 @@ background: #345212;
 background-color:rgba(192,192,192,0.85);
 
 border-radius: 5px;
+
 img{
+position: absolute;
+left: 0px;
+top: 0px;
+z-index: 1000;
 margin: 0 auto;
 width: 400px;
 float: left;
@@ -134,7 +139,9 @@ float: left;
 
 background: white;
 	width: 400px;
-	 
+	padding: 2em;
+	margin-bottom: 4em;
+	margin-top: -1em;
 
 }
 
