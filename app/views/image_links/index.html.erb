@@ -1,23 +1,30 @@
 
 
-
+<div class="row">
 <% @image_links.each do |image_link| %>
+<div class="col-md-1 col-md-offset-3"><%= follow_link(image_link.user) %></div>
   <%= div_for image_link do %>
-    <div class="text_post_upper"> 
-      <h2><%= image_link.title %></h2>
-      <p>Published at
-        <%= time_ago_in_words(image_link.created_at) %>
-        by
-       <%= image_link.user.name %>
-        </p>
+    
+      <div class="col-md-1 col-md-offset-3">
+        by user:
+        <strong><%= "@" + image_link.user.name %>
+        </strong>
+      </div>
+      <div class="text_post_upper col-md-offset-6"> 
+        <h2><%= image_link.title %></h2>
+      </div>
+      
     </div>
-  <%= image_tag image_link.url, :class => 'image-link-image thumbnail', :id => 'centerimg' %>
+
+
+
+  <%= image_tag image_link.url, :class => 'image-link-image thumbnail col-md-offset-6', :id => 'centerimg' %>
   
 <%# <% @image_links.each do |image_link| %>
  <%#  <%= content_tag :p, image_link.url %>
 <%# <% end %>
 
-  <div class="text_post_box text_post_center"> 
+  <div class="text_post_box col-md-offset-6"> 
     <div id="quizsubmit" class='likes pull-left'>
       <span class="total-likes">
         <%= image_link.likes.count %>
@@ -36,6 +43,12 @@
 
     </div>
   </div>
+
+  <span class="text_post_lower col-md-offset-6">
+  Published at
+        <%= time_ago_in_words(image_link.created_at) %>
+  </span>
+
     <p>
       <%= link_to "Show", image_link_path(image_link) %> | 
     </p> 

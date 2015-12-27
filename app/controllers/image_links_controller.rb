@@ -11,7 +11,7 @@ class ImageLinksController < ApplicationController
     end
 
     def new
-        @image_link = ImageLink.new
+        @image_link = current_user.image_links.build
     end
 
     def edit
@@ -19,7 +19,7 @@ class ImageLinksController < ApplicationController
     end
 
     def create
-        @image_link = ImageLink.new(url: params[:image_link][:url], title: params[:image_link][:title])
+        @image_link = current_user.image_links.build(url: params[:image_link][:url], title: params[:image_link][:title])
     if  @image_link.save
         redirect_to image_links_path
     else
