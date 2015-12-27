@@ -1,4 +1,7 @@
 class ImageLinksController < ApplicationController
+    before_action :find_image_link, only: [:show, :edit, :update, :destroy]
+
+
     def index
         @image_links = ImageLink.all
     end
@@ -35,8 +38,8 @@ class ImageLinksController < ApplicationController
     end
     end
 
-    def delete
-        @image_link = ImageLink.find(params[:id])
+    def destroy
+       
         @image_link.destroy
         redirect_to image_links_path
     end
@@ -45,5 +48,9 @@ class ImageLinksController < ApplicationController
     private
   def image_link_params
     params.require(:image_link).permit(:url, :title)
-  end    
+  end   
+
+  def find_image_link
+    @image_link = ImageLink.find(params[:id])
+  end 
 end

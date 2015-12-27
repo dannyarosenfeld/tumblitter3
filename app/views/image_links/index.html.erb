@@ -2,46 +2,71 @@
 
 
 <% @image_links.each do |image_link| %>
-
   <%= div_for image_link do %>
-   <div class="text_post_upper"> 
-  <h2><%= image_link.title %></h2>
-</div>
-  
-  
-  
+    <div class="text_post_upper"> 
+      <h2><%= image_link.title %></h2>
+      <p>Published at
+        <%= time_ago_in_words(image_link.created_at) %>
+        by
+       <%= image_link.user.name %>
+        </p>
+    </div>
   <%= image_tag image_link.url, :class => 'image-link-image thumbnail', :id => 'centerimg' %>
   
-
-
-
 <%# <% @image_links.each do |image_link| %>
  <%#  <%= content_tag :p, image_link.url %>
 <%# <% end %>
 
- <div class="text_post_box text_post_center"> 
-  <div class='likes pull-left'>
-    <span class="total-likes">
-  <%= image_link.likes.count %>
-    </span> 
-  </div>
-
-  
+  <div class="text_post_box text_post_center"> 
+    <div id="quizsubmit" class='likes pull-left'>
+      <span class="total-likes">
+        <%= image_link.likes.count %>
+      </span> 
+    </div>
 <%# <%= link_to "edit", edit_image_link_path(image_link) %>
-  
+    <div class="btn2">
+    <%= form_for Like.new, :remote => true do |f| %>
+      <%= f.hidden_field :likeable_type, :value => image_link.class %>
+      <%= f.hidden_field :likeable_id, :value => image_link.id %>
+      <%= f.hidden_field :user_id, :value => current_user.id %>
+      <%= f.button "", :id => 'btn1', :class => 'fa fa-thumbs-up fa-2x' %>
+    <p>
+      <%= link_to "Show", image_link_path(image_link) %> | 
+    </p> 
 
-  <%= form_for Like.new, :remote => true do |f| %>
-    <%= f.hidden_field :likeable_type, :value => image_link.class %>
-    <%= f.hidden_field :likeable_id, :value => image_link.id %>
-    <%= f.hidden_field :user_id, :value => current_user.id %>
-    <%= f.submit "Like" %>
- </div> 
+    </div>
+  </div>
+    <p>
+      <%= link_to "Show", image_link_path(image_link) %> | 
+    </p> 
+      <% end %>
   <% end %>
- <% end %>
- <% end %>
+<% end %>
 
 
 
+
+
+ <script>
+ /*
+console.log("shithappened");
+  document.getElementsByClassName("btn2")[0].onclick = function(){
+    this.style.backgroundColor = "#7FFF00";
+    //this.disabled = true;
+     
+
+
+     var x = document.getElementsByClassName("btn2");
+var i;
+for (i = 0; i < x.length; i++) {
+    x[i].style.backgroundColor = "red";
+}
+
+
+};
+*/
+
+</script>
 
 
 

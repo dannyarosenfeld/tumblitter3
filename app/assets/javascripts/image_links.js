@@ -3,6 +3,8 @@
 // # You can use CoffeeScript in this file: http://coffeescript.org/
 
 
+
+
 function makeBig() {
   
   $(this).removeClass('thumbnail');
@@ -22,4 +24,17 @@ function makeSmall() {
 $(document).ready(function() {
   $(document).on('mouseenter', '.image-link-image',  makeBig);
   $(document).on('mouseleave', '.image-link-image',  makeSmall);
+
+    $("#likebtn").click().attr("disabled", "disabled");
+
+
 });
+
+
+$(function() {
+    $("#likebtn").click().attr("disabled", "disabled");
+});
+
+function disableFunction() {
+    document.getElementById("btn1").disabled = 'true';
+}

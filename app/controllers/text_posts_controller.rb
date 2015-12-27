@@ -1,4 +1,6 @@
 class TextPostsController < ApplicationController
+     before_action :find_text_post, only: [:show, :edit, :update, :destroy]
+
     def index
         @text_posts = TextPost.all
         
@@ -36,22 +38,23 @@ class TextPostsController < ApplicationController
     end
     end
 
-    def delete
-        @text_post = TextPost.find(params[:id])
-        @text_post.destroy
-        redirect_to text_posts_path
-    end
-       
+   
     def destroy
         
         @text_post.destroy
         redirect_to text_posts_path
     
     end
-    private
-  def text_post_params
+private
+
+def text_post_params
     params.require(:text_post).permit(:description, :name)
-  end    
+end
+
+def find_text_post
+    @text_post = TextPost.find(params[:id])
+   
+end    
     
     
     
