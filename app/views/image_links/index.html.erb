@@ -1,64 +1,65 @@
 
 
-<div class="row">
+
 <% @image_links.each do |image_link| %>
-<div class="col-md-1 col-md-offset-3"><%= follow_link(image_link.user) %></div>
   <%= div_for image_link do %>
-    
-      <div class="col-md-1 col-md-offset-3">
-        by user:
-        <strong><%= "@" + image_link.user.name %>
+    <div class="row">
+      <div class="col-md-1 col-md-offset-3"><%= follow_link(image_link.user) %>
+      </div>
+      <div class="col-md-1 user_side">
+        <strong>by user:<%= "@" + image_link.user.name %>
         </strong>
       </div>
-      <div class="text_post_upper col-md-offset-6"> 
+      <div class="text_post_upper col-md-3 col-md-offset-1"> 
         <h2><%= image_link.title %></h2>
       </div>
-      
     </div>
 
 
-
-  <%= image_tag image_link.url, :class => 'image-link-image thumbnail col-md-offset-6', :id => 'centerimg' %>
   
+  <div class="row">
+      <%= image_tag image_link.url, :class => 'image-link-image thumbnail col-md-offset-6', :id => 'centerimg' %>
+  </div>
 <%# <% @image_links.each do |image_link| %>
  <%#  <%= content_tag :p, image_link.url %>
 <%# <% end %>
 
-  <div class="text_post_box col-md-offset-6"> 
-    <div id="quizsubmit" class='likes pull-left'>
+  <div class="text_post_box center"> 
       <span class="total-likes">
         <%= image_link.likes.count %>
       </span> 
-    </div>
-<%# <%= link_to "edit", edit_image_link_path(image_link) %>
+    <%# <%= link_to "edit", edit_image_link_path(image_link) %>
     <div class="btn2">
-    <%= form_for Like.new, :remote => true do |f| %>
-      <%= f.hidden_field :likeable_type, :value => image_link.class %>
-      <%= f.hidden_field :likeable_id, :value => image_link.id %>
-      <%= f.hidden_field :user_id, :value => current_user.id %>
-      <%= f.button "", :id => 'btn1', :class => 'fa fa-thumbs-up fa-2x' %>
+      <%= form_for Like.new, :remote => true do |f| %>
+        <%= f.hidden_field :likeable_type, :value => image_link.class %>
+        <%= f.hidden_field :likeable_id, :value => image_link.id %>
+        <%= f.hidden_field :user_id, :value => current_user.id %>
+        <%= f.button "", :id => 'btn1', :class => 'fa fa-thumbs-up fa-2x' %>
+    </div>
     <p>
       <%= link_to "Show", image_link_path(image_link) %> | 
     </p> 
-
     </div>
   </div>
-
+<!--
   <span class="text_post_lower col-md-offset-6">
   Published at
         <%= time_ago_in_words(image_link.created_at) %>
   </span>
 
     <p>
-      <%= link_to "Show", image_link_path(image_link) %> | 
+ <%#     <%= link_to "Show", image_link_path(image_link) %> | 
     </p> 
-      <% end %>
+
+  -->
+    <% end %>
   <% end %>
 <% end %>
 
+</div>
+</div>
 
-
-
+<!--
 
  <script>
  /*
@@ -87,7 +88,7 @@ for (i = 0; i < x.length; i++) {
 
 
 
-
+-->
 
 
 

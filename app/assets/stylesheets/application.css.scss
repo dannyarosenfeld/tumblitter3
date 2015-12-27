@@ -21,10 +21,13 @@
 html, body {
 	font-family: 'Raleway', sans-serif;
 	text-decoration: none;
-	
+	color: #23527C;
 }
 
+h2 {
+color: #23527C;
 
+}
 
 #main_back{
  /* Location of the image */
@@ -283,5 +286,12 @@ border:none;
 font-size: 30px;
 color:red;
 
+
+}
+
+.user_side{
+
+background: white;
+border-rounded: 5px;
 
 }
