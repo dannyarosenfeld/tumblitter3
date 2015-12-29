@@ -1,6 +1,11 @@
 
 
-<ul class="center">
+<ul class="whitey center">
+
+
+    <%= image_tag current_user.avatar.url(:thumb) %> 
+        
+
   <li>
     <%= content_tag :strong, current_user.name %>
   </li>
@@ -12,9 +17,11 @@
 
     <table class="user_info center">
       <tbody>
+
+        
         <tr>
           <td>
-            <%= content_tag :h4, 'n' %>
+            <%= content_tag :h4, current_user.image_links.count %>
             <%= content_tag :small, 'Posts', :class => "uppercase lighter" %>
           </td>
           <td>

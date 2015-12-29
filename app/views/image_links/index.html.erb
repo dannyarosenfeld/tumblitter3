@@ -9,6 +9,8 @@
       <div class="col-md-1 user_side">
         <strong>by user:<%= "@" + image_link.user.name %>
         </strong>
+        <%= image_tag image_link.user.avatar.url(:thumb) %>
+
       </div>
       <div class="text_post_upper col-md-3 col-md-offset-1"> 
         <h2><%= image_link.title %></h2>

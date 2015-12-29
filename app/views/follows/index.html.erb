@@ -1,6 +1,6 @@
 
 
-<td><%= image_tag current_user.avatar.url(:thumb) %></td>
+
 
 <%= render :partial => 'shared/left_nav' %>
 <div class="whitey center">
@@ -13,7 +13,7 @@
 <ol>
   <% @users.each do |user| %>
 
-<td><%= image_tag user.avatar.url(:thumb) %></td>
+<%= image_tag user.avatar.url(:thumb) %> 
         
        
 

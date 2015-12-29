@@ -6,12 +6,12 @@
                        :role => :form do |f| %>
   <div class="center">
     <%= content_tag :div do %>
-      <%= f.text_field :name, :placeholder => "Full name" %>
+      <%= f.text_field :name, :placeholder => "Your name" %>
       <%= f.errors_for :name %>
     <% end %>
 
     <%= content_tag :div do %>
-      <%= f.text_field :username, :placeholder => "Username" %>
+      <%= f.text_field :username, :placeholder => "Gimme handle" %>
       <%= f.errors_for :username %>
     <% end %>
 
