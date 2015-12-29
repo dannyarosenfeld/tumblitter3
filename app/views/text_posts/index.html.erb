@@ -1,5 +1,7 @@
-<div id="text_posts_back">
-<strong><%= link_to "New", new_text_post_path %></strong>
+
+
+
+<!--
 <%#
 <nav id="sidebar">
   <a class="nav-logo-link page-title" href="/">
@@ -16,44 +18,52 @@
 </nav>
 %>
 
+-->
+
 <%= @text_posts.each do |text_post| %>
+  <%= div_for text_post do %>
+<strong><%= link_to "New", new_text_post_path %></strong>
+
+<div class="row">
+      <div class="col-md-1 col-md-offset-3"><%= follow_link(text_post.user) %>
+      </div>
+      <div class="col-md-1 user_side">
+        <strong>by user:<%= "@" + text_post.user.name %>
+        </strong>
+      </div>
+      <div class="text_post_upper col-md-3 col-md-offset-1"> 
+        <h2><%= text_post.name %></h2>
+      </div>
+    </div>
 
 
+    <div class="text_post_box text_post_center">
+      <%= content_tag :p, text_post.description %>
+    </div>
 
-<%= div_for text_post do %>
-<div class="text_post_upper">
-<h2><%= text_post.name %></h2>
-</div>
-<div class="text_post_box text_post_center">
-<%= content_tag :p, text_post.description %>
-</div>
-<div class="text_post_box center">
-<span class="total-likes">
-  <%= text_post.likes.count %>
-</span> 
-
-<div class="btn2">
-  <%= form_for Like.new, :remote => true do |f| %>
-    <%= f.hidden_field :likeable_type, :value => text_post.class %>
-    <%= f.hidden_field :likeable_id, :value => text_post.id %>
-    <%= f.hidden_field :user_id, :value => current_user.id %>
-   <%= f.button "", :id => 'btn1', :class => 'fa fa-thumbs-up fa-2x' %>
-</div>
-
-
-<p>
-<%= link_to "Show", text_post_path(text_post) %> | 
     
-</p>
+    <div class="text_post_box center">
 
+      <span class="total-likes">
+        <%= text_post.likes.count %>
+      </span> 
 
+    <div class="btn2">
+      <%= form_for Like.new, :remote => true do |f| %>
+        <%= f.hidden_field :likeable_type, :value => text_post.class %>
+        <%= f.hidden_field :likeable_id, :value => text_post.id %>
+        <%= f.hidden_field :user_id, :value => current_user.id %>
+        <%= f.button "", :id => 'btn1', :class => 'fa fa-thumbs-up fa-2x' %>
+    </div>
+
+        <p>
+        <%= link_to "Show", text_post_path(text_post) %> | 
+        </p>
+    </div>
   </div>
-</div>
 
 <% end %>
-
 <%# <%= content_tag :h2, text_post.description %>
-
 <% end %>
 <% end %>
 </div>

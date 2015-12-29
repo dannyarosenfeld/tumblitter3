@@ -1,5 +1,5 @@
 class TextPostsController < ApplicationController
-     before_action :find_text_post, only: [:show, :edit, :update, :destroy]
+    before_action :find_text_post, only: [:show, :edit, :update, :destroy]
 
     def index
         @text_posts = TextPost.all
@@ -11,15 +11,16 @@ class TextPostsController < ApplicationController
     end
 
     def new
-         @text_post = TextPost.new
+        @text_post = current_user.text_posts.build
     end
 
+
     def edit
-        @text_post= TextPost.find(params[:id])
+        @text_post = TextPost.find(params[:id])
     end
 
     def create
-        @text_post= TextPost.new(description: params[:text_post][:description], name: params[:text_post][:name])
+        @text_post = current_user.text_posts.build(description: params[:text_post][:description], name: params[:text_post][:name])
     if  @text_post.save
         redirect_to text_posts_path
     else
@@ -55,26 +56,5 @@ def find_text_post
     @text_post = TextPost.find(params[:id])
    
 end    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+       
 end
