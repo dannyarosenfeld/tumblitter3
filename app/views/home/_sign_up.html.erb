@@ -15,11 +15,21 @@
       <%= f.errors_for :username %>
     <% end %>
 
+
+    <div class="field">
+      <%= f.text_field :bio, :placeholder => "Bio" %>
+      <%= f.errors_for :bio %>
+     </div>
+
+
     <%= content_tag :div do %>
       <%= f.text_field :email, :placeholder => "Email" %>
       <%= f.errors_for :email %>
     <% end %>
 
+
+    
+    
     <%= content_tag :div do %>
       <%= f.password_field :password, :placeholder => "Password" %>
       <%= f.errors_for :password %>
