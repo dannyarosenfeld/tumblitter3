@@ -16,8 +16,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-
-
 html, body {
 	font-family: 'Raleway', sans-serif;
 	text-decoration: none;
@@ -28,6 +26,29 @@ h2 {
 color: #23527C;
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+input[type=file]{
+    width:290px;
+    color:orange;
+	background:black;
+
+
+}
+
 
 #main_back{
  /* Location of the image */
@@ -204,11 +225,35 @@ margin-left: 15px;
 
 }
 
-.center{
+.center1 {
+	
     width: 400px;
+    
     margin:0 auto;
     text-align:left;
     padding: 20px;
+	z-index: -1;
+	
+	
+  
+
+
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+
+
+.center {
+	
+	width: 400px;
+    margin:0 auto;
+    text-align:left;
+    padding: 20px;
+	z-index: 0;
 }
 
 

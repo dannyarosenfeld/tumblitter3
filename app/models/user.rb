@@ -8,8 +8,10 @@ class User < ActiveRecord::Base
   has_many :text_posts
   has_many :likes
 
-  validates :name, :presence => true
-  validates :username, :presence => true, :uniqueness => true
+  validates :name, :presence => true, length: { maximum: 15, too_long: "%{count} characters max for your name please!" }
+  validates :name, format: { with: /\A[a-zA-Z0-9]+\Z/, message: "no spaces please" }
+  validates :username, :presence => true, :uniqueness => true, length: {maximum: 15, too_long: "%{count} characters max for your awesome handle."}
+  validates :bio, length: { maximum: 150, too_long: "Bruh listen %{count} characters is enough..." }
 
   # Scope method to get all users except the one passed.
   #
@@ -39,10 +41,14 @@ class User < ActiveRecord::Base
 
 
 validates_attachment :avatar,
-    :presence => true,
+    :presence => true, message: 'No file selected!',
     :size => { :in => 0..10.megabytes },
     :content_type => { :content_type => /^image\/(jpeg|png|gif|tiff)$/ }
 
+  
+ 
+
+  
 
 
 

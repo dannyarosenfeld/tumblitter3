@@ -4,7 +4,9 @@
                        :builder => InlineErrorsBuilder,
                        :method => :POST,
                        :role => :form do |f| %>
-  <div class="center">
+  <div class="center1">
+    </div>
+    <div class="center">
     <%= content_tag :div do %>
       <%= f.text_field :name, :placeholder => "Your name" %>
       <%= f.errors_for :name %>
@@ -38,10 +40,11 @@
     
   <div class="field">
     <%= f.label :avatar %><br>
-    <%= f.file_field :avatar %>
+    <%= f.file_field :avatar, :placeholder => "Upload Avatar"%>
   </div>
 
     
     <%= f.submit "Sign up for Tumblful" %>
   </div>
+
 <% end %>
