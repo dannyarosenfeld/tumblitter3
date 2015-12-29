@@ -49,6 +49,7 @@ end
 # Use Devise for authentication: https://github.com/plataformatec/devise#getting-started
 gem 'devise'
 
+gem 'paperclip', github: 'thoughtbot/paperclip'
 
 
 
