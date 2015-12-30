@@ -1,0 +1,60 @@
+
+/* CSS reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+	
+	z-index: 9999;
+}
+html,body {
+	margin:0;
+	padding:0;
+}
+
+
+
+
+q:before,q:after {
+	content:'';
+}
+abbr,acronym { border:0;
+}
+/* General Demo Style */
+body{
+	font-family: Constantia, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+	
+	font-weight: 400;
+	font-size: 15px;
+	color: #aa3e03;
+	
+}
+
+a{
+	
+	text-decoration: none;
+}
+
+
+/* Header Style */
+.codrops-top{
+	font-family: Arial, sans-serif;
+	line-height: 24px;
+	font-size: 13px;
+	width: 100%;
+	
+	
+	text-transform: uppercase;
+	z-index: 9999;
+	position: relative;
+	-moz-box-shadow: 1px 0px 2px #000;
+	-webkit-box-shadow: 1px 0px 2px #000;
+	box-shadow: 1px 0px 2px #000;
+}
+.codrops-top a{
+	
+	letter-spacing: 1px;
+	
+	
+}
+.codrops-top a:hover{
+	
+}
+

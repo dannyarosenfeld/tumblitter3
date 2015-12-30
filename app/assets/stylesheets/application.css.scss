@@ -11,6 +11,8 @@
  *= require jquery-ui
  *= require_self
  *= require_tree .
+*= require_demo.css
+*= require_style1.css
  */
 
 @import "bootstrap-sprockets";
@@ -52,7 +54,7 @@ input[type=file]{
 
 #main_back{
  /* Location of the image */
-  background-image: image-url('city_lights.jpg');
+  /* background-image: image-url('city_lights.jpg'); */
   
   /* Background image is centered vertically and horizontally at all times */
   background-position: center center;
@@ -72,7 +74,7 @@ input[type=file]{
      while the background image is loading */
   background-color: #464646;
 
-}
+} 
 
 .whitey {
 
@@ -285,6 +287,7 @@ margin-left: 3em;
 	#main_content {
 	
 	#header {
+		z-index: 10;
 		padding: 1em 3em;
 		border-bottom: 1px solid #d6dce0;
 		background: #f5f7f9;
@@ -347,3 +350,8 @@ background: white;
 border-rounded: 5px;
 
 }
+
+
+
+
+
