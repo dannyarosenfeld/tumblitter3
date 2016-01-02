@@ -7,6 +7,6 @@ class HomeController < ApplicationController
   # code is actually required here.
   #
   def index
-
+  		render :layout => false
   end
 end
