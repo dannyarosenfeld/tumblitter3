@@ -19,6 +19,12 @@
 %>
 
 -->
+<% content_for :body do %>
+  <body id='text_posts_index'>
+<% end %>
+
+
+
 
 <%= @text_posts.each do |text_post| %>
   <%= div_for text_post do %>

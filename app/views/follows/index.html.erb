@@ -1,29 +1,19 @@
 
 
+<% content_for :body do %>
+  <body id='text_posts_index'>
+<% end %>
 
 
 <%= render :partial => 'shared/left_nav' %>
 <div class="whitey center">
 <h4>Who to follow</h4>
-
-        
-
 <p>Tumblful accounts in alpabetical order.</p>
-<hr />
+<hr/>
 <ol>
-  <% @users.each do |user| %>
+<% @users.each do |user| %>
 
 <%= image_tag user.avatar.url(:thumb) %> 
-        
-       
-
-
-
-
-
-
-
-  
     <li>
       <%= content_tag :strong, user.name %>
       <%= content_tag :span, "@"+user.username %>
