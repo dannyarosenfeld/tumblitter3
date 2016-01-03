@@ -389,8 +389,27 @@ margin-top: -20px;
 .bg-black {
 
 
-	background:grey;
+	background: rgba(0,0,0,.3);
+	border-rounded:10px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	
 }
+
+
+.bg-black2 {
+
+
+	background: #2B2E2E;
+	opacity: .95;
+	border-rounded:10px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	
+	
+}
+
+
 
 .margin-top-40 {
 
@@ -404,5 +423,11 @@ padding-right: 20px;
 text-align: left;
 
 
+
+}
+
+.blue_text {
+color: #9eafba;
+z-index: 9999;
 
 }
