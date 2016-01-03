@@ -1,11 +1,31 @@
-<h4>New to Tumblful? <span>Sign up</span></h4>
+<!-- <h4>New to Tumblful? <span>Sign up</span></h4> -->
+
+<div class="panel-default">
 
 <%= form_for resource, :url => user_registration_path,
                        :builder => InlineErrorsBuilder,
                        :method => :POST,
                        :role => :form do |f| %>
-  
-    <div class="center">
+                       
+
+
+    
+
+        
+  <div class="field">
+    <%= f.label :avatar %><br>
+   <!-- <div class="rounded whitey panel panel-default"> -->
+    <%= f.file_field :avatar, :placeholder => "Upload Avatar"%>
+  </div>
+
+    
+   
+ 
+
+
+
+
+   
     <%= content_tag :div do %>
       <%= f.text_field :name, :placeholder => "Your name" %>
       <%= f.errors_for :name %>
@@ -27,23 +47,22 @@
       <%= f.text_field :email, :placeholder => "Email" %>
       <%= f.errors_for :email %>
     <% end %>
-
-
     
     
     <%= content_tag :div do %>
       <%= f.password_field :password, :placeholder => "Password" %>
-      <%= f.errors_for :password %>
+      <%= f.errors_for :password %> <br>
+       <%= f.submit "Sign up for Tumblful" %>
     <% end %>
 
     
-  <div class="field">
-    <%= f.label :avatar %><br>
-    <%= f.file_field :avatar, :placeholder => "Upload Avatar"%>
-  </div>
 
-    
-    <%= f.submit "Sign up for Tumblful" %>
-  </div>
+    </div>
 
-<% end %>
+      
+
+
+          </div>
+
+
+          <% end %>

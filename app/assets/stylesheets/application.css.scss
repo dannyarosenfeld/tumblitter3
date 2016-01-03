@@ -47,7 +47,7 @@ color: #23527C;
 
 
 input[type=file]{
-    width:290px;
+    width:190px;
     color:orange;
 	background:black;
 
@@ -215,7 +215,8 @@ border-radius: 3px;
 padding: 5px;
 border: 2px solid white;
 opacity: .8;
-
+color: #555555;
+border: solid 1px #ccc;
 
 }
 h1, h2, h3, h4, h5, h6 {
@@ -357,3 +358,51 @@ border-rounded: 5px;
 
 
 
+.home_pass {
+width: 130px;
+border: 1px solid blue;
+
+
+}
+
+.rounded {
+background: white;
+border-rounded: 5px;
+width: 300px;
+
+
+}
+
+.padding_20 {
+
+padding:10px;
+
+
+}
+
+.margin-top-20 {
+margin-top: -20px;
+
+
+}
+
+.bg-black {
+
+
+	background:grey;
+}
+
+.margin-top-40 {
+
+margin-top: 43px;
+padding-left: 20px;
+padding-right: 20px;
+}
+
+
+.text-left {
+text-align: left;
+
+
+
+}

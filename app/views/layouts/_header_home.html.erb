@@ -1,0 +1,80 @@
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <span class="home_search">
+     <%= link_to "Home", root_path, class: "navbar-brand navbar-left" %>
+      
+      <form class="navbar-form navbar-left" role="search">
+      <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit </button>
+      </form>
+
+</span>
+
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      
+      
+        <% if user_signed_in? %>
+         
+           
+
+        <% else %>
+
+    <ul class="row">
+    <li class="col-md-offset-1">
+
+      
+
+
+
+
+
+
+   <%= form_for :user, :url => user_session_path,
+                        :builder => InlineErrorsBuilder,
+                        :method => :POST,
+                        :role => :form do |f| %>
+      
+        
+
+
+   
+      <%= f.text_field :email, :placeholder => "Username or email" %>
+      <%= f.errors_for :email %>
+    </li>
+
+      
+      <li>
+      <%= f.password_field :password, :placeholder => "Password" %>
+      <%= f.errors_for :password %>
+       </li>
+       <li>
+      <%= f.submit "Sign in" %>
+      </li>
+    
+  </ul>
+      
+        <% end %>
+
+      
+     
+
+
+      
+    
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<% end %>

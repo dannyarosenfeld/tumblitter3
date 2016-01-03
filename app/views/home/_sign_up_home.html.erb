@@ -1,0 +1,72 @@
+
+
+<%= form_for resource, :url => user_registration_path,
+                       :builder => InlineErrorsBuilder,
+                       :method => :POST,
+                       :role => :form do |f| %>
+  
+<div class="sign_up_home">
+  <div class="row"><div class="col-md-3 col-md-offset-2"><h4>New to Tumblful? <span>Sign up</span></h4></div></div>
+  <div class="row">
+
+
+<div class="whitey col-md-5 col-md-offset-2">
+<p>8-bit affogato paleo, marfa chillwave fixie pitchfork intelligentsia actually. Literally selvage plaid, meggings asymmetrical ennui beard. Organic kale chips mixtape. </p>
+</div>
+
+    <div class="col-md-1">
+    <%= content_tag :div do %>
+      <%= f.text_field :name, :placeholder => "Your name" %>
+      <%= f.errors_for :name %>
+    <% end %>
+
+    <%= content_tag :div do %>
+      <%= f.text_field :username, :placeholder => "Gimme handle" %>
+      <%= f.errors_for :username %>
+    <% end %>
+    </div>
+
+    <div class="col-md-2 col-md-offset-1">
+<div class="field">
+    <%= f.label :avatar %><br>
+    <%= f.file_field :avatar, :placeholder => "Upload Avatar"%>
+  </div>
+
+
+
+   
+    </div>
+    <!-- end row -->
+  </div>   
+
+
+  <div class="row">
+    <div class="col-md-1 col-md-offset-7">
+    <%= content_tag :div do %>
+      <%= f.text_field :email, :placeholder => "Email" %>
+      <%= f.errors_for :email %>
+    <% end %>
+
+
+    
+    
+    <%= content_tag :div do %>
+      <%= f.password_field :password, :placeholder => "Password" %>
+      <%= f.errors_for :password %>
+    <% end %>
+  </div>
+   
+
+    <div class="col-md-1 col-md-offset-1">
+   <div class="field">
+      <%= f.text_field :bio, :placeholder => "Bio", :class => 'bio_field' %>
+      <%= f.errors_for :bio %>
+     
+    </div>
+
+    
+    <%= f.submit "Sign up for Tumblful" %>
+  </div>
+  </div>
+ </div>
+<% end %>
