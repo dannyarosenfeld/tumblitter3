@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   validates :name, :presence => true, length: { maximum: 15, too_long: "%{count} characters max for your name please!" }
   validates :name, format: { with: /\A[a-zA-Z0-9]+\Z/, message: "no spaces please" }
   validates :username, :presence => true, :uniqueness => true, length: {maximum: 15, too_long: "%{count} characters max for your awesome handle."}
-  validates :bio, length: { maximum: 150, too_long: "Bruh listen %{count} characters is enough..." }
+  validates :bio, length: { maximum: 115, too_long: "Bruh listen %{count} characters is enough..." }
 
   # Scope method to get all users except the one passed.
   #

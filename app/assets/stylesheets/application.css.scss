@@ -206,6 +206,15 @@ margin-left: 15px;
 	z-index: 0;
 }
 
+.center3 {
+	width: 400px;
+    margin:0 auto;
+    
+    padding: 20px;
+	z-index: 0;
+
+
+}
 
 a {
 	text-decoration: none;
@@ -312,7 +321,7 @@ background: rgba(0,0,0,.3);
 border-rounded:10px;
 border-bottom-left-radius: 20px;
 border-bottom-right-radius: 20px;
-	
+}	
 
 
 .bg-black2 {
@@ -340,3 +349,51 @@ text-align: left;
 color: #9eafba;
 z-index: 9999;
 }
+
+.float-right {
+float:right;
+}
+
+.float-left {
+float:left;	
+}
+
+.bio {
+
+width: 360px;
+}
+
+.avatar {
+padding-right:20px;
+margin-bottom: 20px;
+
+}
+
+.av-width {
+	margin-left: -50px;}
+
+.user_name_left {
+margin-left: -9em;
+
+margin-right: 1em;
+}
+
+.margin-follows {
+
+margin-left: 0em;
+
+margin-right: 1em;
+
+}
+
+.margin-email {
+
+	margin-left: 1em;
+
+
+} 
+/*
+.left80 {
+	margin-left: 20px;
+	margin-top: 20em;}
+*/

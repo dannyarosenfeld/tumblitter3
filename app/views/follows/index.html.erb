@@ -12,14 +12,18 @@
 <hr/>
 <ol>
 <% @users.each do |user| %>
-
+<div class="float-left avatar">
 <%= image_tag user.avatar.url(:thumb) %> 
-    <li>
-      <%= content_tag :strong, user.name %>
-      <%= content_tag :span, "@"+user.username %>
-      
-      <%= follow_link(user) %>
+</div>
+<div class="bio av-width">
+    <%= content_tag :small, user.bio %>
+</div>
+    <li class="av-width">
+      <%# <%= content_tag :strong, user.name %>
+      <%= content_tag :span, "@"+user.username, :class => 'left80'%>
     </li>
+      <%= follow_link(user) %>
+    
     <hr>
   <% end %>
 </ol>

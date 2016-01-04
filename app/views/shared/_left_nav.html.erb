@@ -1,23 +1,30 @@
 
 
-<ul class="whitey center">
+<div class="whitey center3 clearfix">
 
-
-    <%= image_tag current_user.avatar.url(:thumb) %> 
-        
-  <li>
+      
+        <div class="float-left avatar">
+    <%= image_tag current_user.avatar.url(:thumb) %>
+        </div>
+        <div class="bio">
     <%= content_tag :small, current_user.bio %>
-  </li>
+        </div>
+  <div>
+    <p> <p>
+  </div>
+  <div class="float-left">
+    <%= content_tag :strong, current_user.name, :class => 'user_name_left' %>
+  </div>
+<!--
+  <div>
+<%#    <%= content_tag :strong, '@'+current_user.username, :class => 'margin-follows' %>
+  </div>
+ -->
+   <div>
+    <%= content_tag :small, current_user.email %>
+  </div>
 
-  <li>
-    <%= content_tag :strong, current_user.name %>
-  </li>
-
-  <li>
-    <%= content_tag :small, '@'+current_user.username %>
-  </li>
-
-</ul>
+</div>
 
 
     <table class="user_info center">
@@ -40,8 +47,9 @@
       </tbody>
     </table>
  
-
+<!--
 <ul>
   <%= nav_item("Follow", follows_path) %>
 </ul>
 
+-->
