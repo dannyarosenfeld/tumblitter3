@@ -21,7 +21,6 @@ html, body {
 	font-family: 'Raleway', sans-serif;
 	text-decoration: none;
 	color: #23527C;
-
 }
 
 
@@ -29,29 +28,12 @@ html, body {
 
 h2 {
 color: #23527C;
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 input[type=file]{
     width:190px;
     color:orange;
 	background:black;
-
-
 }
 
 
@@ -80,38 +62,26 @@ input[type=file]{
 } 
 
 .whitey {
-
 background-color:rgba(192,192,192,0.85);
-
 border-radius: 10px;
-
-
 }
 
 
 .date{
-			
-	color: grey;
+color: grey;
 font-size: 1.3rem;
-    margin-top: .3rem;
-
-		}
+margin-top: .3rem;
+}
 
 
 .user_info{
-
 background-color:rgba(192,192,192,0.85);
-
 border-radius: 5px;
-
-
-
 }
 
 .padback {
 padding: 30px;
 background-color:white;
-
 }
 
 
@@ -120,11 +90,9 @@ background-color:white;
   /* ...but not required as filter works too */
   /* should come BEFORE filter */
   -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; // IE8
-
   /* This works in IE 8 & 9 too */
   /* ... but also 5, 6, 7 */
   filter: alpha(opacity=50); // IE 5-7
-  
   /* Modern Browsers */
   opacity: 0.5;
 }
@@ -134,88 +102,63 @@ background-color:white;
 background: #345212;
 
 }
+
 .text_post_box{
-	
 background-color:rgba(192,192,192,0.85);
-
 border-radius: 5px;
-
-img{
-position: absolute;
-left: 0px;
-top: 0px;
-z-index: 1000;
-margin: 0 auto;
-width: 400px;
-float: left;
-
-
-}
-
-}
-.text_post_upper {
-	background: white;
+	img{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 1000;
+	margin: 0 auto;
 	width: 400px;
-	 
-	 border-top-left-radius: 20px;
-	 border-top-right-radius: 20px;
+	float: left;
+	}
+
+}
+
+.text_post_upper {
+background: white;
+width: 400px;
+border-top-left-radius: 20px;
+border-top-right-radius: 20px;
 }
 
 .text_post_lower {
-
 background: white;
-	width: 520px;
-	padding: 2em;
-	margin-bottom: 4em;
-	margin-top: -1em;
-
+width: 520px;
+padding: 2em;
+margin-bottom: 4em;
+margin-top: -1em;
 }
 
 .text_post_middle {
-
 background: white;
-	width: 520px;
-	padding: 2em;
-	
-	
-
+width: 520px;
+padding: 2em;
 }
 
 
 .text_post_center{
-  	width: 400px;
-    margin:0 auto;
-    text-align:left;
-    padding: 40px;
-    margin-bottom: 3em;
-
-    img {
-
+width: 400px;
+margin:0 auto;
+text-align:left;
+padding: 40px;
+margin-bottom: 3em;
+   	img {
 	margin-left:3em;
-	
-
-
     }
-    h2 {
-		border-bottom: 10px green solid;
-	
-    }
-
-    p {
-		width: 100px;
-
-
-    }
+   	 h2 {
+	border-bottom: 10px green solid;
+   	}
+   	p {
+	width: 100px;
+   	}
 }
-
-
-
-
 
 #image_links_back {
 background: orange;
-
-
 }
 
 
@@ -228,8 +171,8 @@ border: 2px solid white;
 opacity: .8;
 color: #555555;
 border: solid 1px #ccc;
-
 }
+
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 500;
 	color: black;
@@ -238,23 +181,14 @@ h1, h2, h3, h4, h5, h6 {
 
 small {
 margin-left: 15px;
-
-
 }
 
 .center1 {
-	
     width: 400px;
-    
     margin:0 auto;
     text-align:left;
     padding: 20px;
 	z-index: -1;
-	
-	
-  
-
-
   -webkit-filter: blur(5px);
   -moz-filter: blur(5px);
   -o-filter: blur(5px);
@@ -265,7 +199,6 @@ margin-left: 15px;
 
 
 .center {
-	
 	width: 400px;
     margin:0 auto;
     text-align:left;
@@ -280,9 +213,7 @@ a {
 }
 
 li {
-margin-left: 3em;
-
-
+	margin-left: 3em;
 }
 
 /*
@@ -299,9 +230,9 @@ margin-left: 3em;
 	}
 */
 
-	#main_content {
+#main_content {
 	
-	#header {
+#header {
 		z-index: 10;
 		padding: 1em 3em;
 		border-bottom: 1px solid #d6dce0;
@@ -310,17 +241,17 @@ margin-left: 3em;
 		margin-top: -20px;
 		p {
 			display: inline;
-		}
+			}
 		a {
 			color: #9eafba;
 			text-decoration: none;
-		}
+			}
 		.buttons {
 			float: right;
 			margin-top: -6px;
-			.button {
-				font-size: .8em;
-				margin-left: .5em;
+		.button {
+			font-size: .8em;
+			margin-left: .5em;
 			}
 		}
 	}
@@ -328,42 +259,30 @@ margin-left: 3em;
 
 
 #sign_out {
-
-
 border-radius: 10px;
 background: aqua;
 display: inline;
-
 }
 
 #account {
-
-
 line-height: 3em;
 display: inline;
 margin-right: -20px;
-
 }
 
 #btn1 {
 background:none;
 border:none;
-
-
 }
 
 .total-likes {
 font-size: 30px;
 color:red;
-
-
 }
 
 .user_side{
-
 background: white;
 border-rounded: 5px;
-
 }
 
 
@@ -372,58 +291,41 @@ border-rounded: 5px;
 .home_pass {
 width: 130px;
 border: 1px solid blue;
-
-
 }
 
 .rounded {
 background: white;
 border-rounded: 5px;
 width: 300px;
-
-
 }
 
 .padding_20 {
-
 padding:10px;
-
-
 }
 
 .margin-top-20 {
 margin-top: -20px;
-
-
 }
 
 .bg-black {
-
-
-	background: rgba(0,0,0,.3);
-	border-rounded:10px;
-	border-bottom-left-radius: 20px;
-	border-bottom-right-radius: 20px;
+background: rgba(0,0,0,.3);
+border-rounded:10px;
+border-bottom-left-radius: 20px;
+border-bottom-right-radius: 20px;
 	
-}
 
 
 .bg-black2 {
-
-
-	background: #2B2E2E;
-	opacity: .95;
-	border-rounded:10px;
-	border-bottom-left-radius: 20px;
-	border-bottom-right-radius: 20px;
-	
-	
+background: #2B2E2E;
+opacity: .95;
+border-rounded:10px;
+border-bottom-left-radius: 20px;
+border-bottom-right-radius: 20px;
 }
 
 
 
 .margin-top-40 {
-
 margin-top: 43px;
 padding-left: 20px;
 padding-right: 20px;
@@ -432,13 +334,9 @@ padding-right: 20px;
 
 .text-left {
 text-align: left;
-
-
-
 }
 
 .blue_text {
 color: #9eafba;
 z-index: 9999;
-
 }

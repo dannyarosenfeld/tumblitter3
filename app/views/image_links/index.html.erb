@@ -22,31 +22,29 @@
 
   
   <div class="row">
-      <%= image_tag image_link.url, :class => 'image-link-image thumbnail col-md-offset-6', :id => 'centerimg' %>
+    <%= image_tag image_link.url, :class => 'image-link-image thumbnail col-md-offset-6', :id => 'centerimg' %>
   </div>
 <%# <% @image_links.each do |image_link| %>
  <%#  <%= content_tag :p, image_link.url %>
 <%# <% end %>
-<div class="row">
-  
+  <div class="row">
     <div class="col-md-4 text_post_box col-md-offset-6 text_post_lower index1">
       <span class="total-likes">
         <%= image_link.likes.count %>
       </span> 
     <%# <%= link_to "edit", edit_image_link_path(image_link) %>
-    <div class="btn2">
-      <%= form_for Like.new, :remote => true do |f| %>
-        <%= f.hidden_field :likeable_type, :value => image_link.class %>
-        <%= f.hidden_field :likeable_id, :value => image_link.id %>
-        <%= f.hidden_field :user_id, :value => current_user.id %>
-        <%= f.button "", :id => 'btn1', :class => 'fa fa-thumbs-up fa-2x' %>
+      <div class="btn2">
+        <%= form_for Like.new, :remote => true do |f| %>
+          <%= f.hidden_field :likeable_type, :value => image_link.class %>
+          <%= f.hidden_field :likeable_id, :value => image_link.id %>
+          <%= f.hidden_field :user_id, :value => current_user.id %>
+          <%= f.button "", :id => 'btn1', :class => 'fa fa-thumbs-up fa-2x' %>
+      </div>
+        <p>
+          <%= link_to "Show", image_link_path(image_link) %> | 
+        </p> 
     </div>
-    <p>
-      <%= link_to "Show", image_link_path(image_link) %> | 
-    </p> 
-    </div>
-  
-</div>
+  </div>
 <!--
   <span class="text_post_lower col-md-offset-6">
   Published at
