@@ -16,6 +16,8 @@
 %>
 
 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Readmore.js/2.1.0/readmore.min.js"></script>
+
 <% content_for :body do %>
   <body id='text_posts_index'>
 <% end %>
@@ -47,14 +49,21 @@
       <h2 class="text-left">
         <%= text_post.name %>
       </h2>
+
+      <article>
       <%= content_tag :p, text_post.description %>
+    </article>
+
+    
+  
+
     </div>
   
 
    
   </div>
 
-    
+
 
 <div class="row">
   <div class="col-md-5 text_post_box col-md-offset-3 text_post_lower index1">
@@ -81,3 +90,13 @@
 <% end %>
 </div>
 </div>
+
+
+
+
+<script>
+$('article').readmore({
+  speed: 4000,
+  lessLink: '<a href="#">Read less</a>'
+});
+ </script>

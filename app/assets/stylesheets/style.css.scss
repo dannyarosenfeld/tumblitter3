@@ -160,8 +160,8 @@ a.page-title:visited {
 }
 
 .alert-float {
-  position: fixed;
-  top: 4em;
+  position: absolute;
+  top: 3.5em;
   z-index: 1050;
   color: white;
   width: 50%;
@@ -172,6 +172,9 @@ a.page-title:visited {
 .alert-float .alert {
   z-index: 1050;
   padding: 10px;
+  color: green;
+
+
 }
 
 table.stats {

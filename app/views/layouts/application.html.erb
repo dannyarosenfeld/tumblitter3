@@ -13,6 +13,8 @@
 <!-- <link rel="stylesheet" type="text/css" href="css/demo.css" />
   <link rel="stylesheet" type="text/css" href="css/style1.css" /> -->
     <script type="text/javascript" src="js/modernizr.custom.86080.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Readmore.js/2.1.0/readmore.min.js"></script>
+
   </head>
 
   <%= yield :body || "<body>" %>
@@ -27,11 +29,11 @@
 
 
     <div class="codrops-top">
-      <%= notices %>
+       <%= content_tag :p, notices, :class => 'notice' %>  
       <div id="main_content" class='main-content'>
         <%= render 'layouts/header' %>
-        <h1 id="header"> Tumblful </h1>
-        <p>
+        
+        <p><h1 id="header"> Tumblful <i class="fa fa-google-wallet fa-1.5x" style="height:.02em;"></i> </h1> 
          <!-- <strong>Avatar:</strong> -->
           <%#   <%= image_tag @user.avatar.url(:large) %>
         </p>

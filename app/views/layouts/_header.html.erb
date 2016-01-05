@@ -20,10 +20,10 @@
          
           
         <% else %>
-      <ul class="nav navbar-right">  
+      <ul class="nav navbar-right nav-fade">  
           <li><%= link_to "Sign Up", new_user_registration_path, class: "active" %></li>
       </ul>
-      <ul class="nav navbar-right">
+      <ul class="nav navbar-right nav-fade">
           <li><%= link_to "Sign In", new_user_session_path, class: "active" %></li>
       </ul>
         <% end %>
@@ -38,7 +38,7 @@
 
 
 
-<ul class="nav navbar-right">
+<ul class="nav navbar-right nav-fade">
     <li><a><%= button_to("Sign out", destroy_user_session_path, id: "sign_out", :method => :delete, :class => "pull-right") if user_signed_in? %><a> </li>
 
 </ul>
