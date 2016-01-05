@@ -31,9 +31,9 @@
   <div class="row">
    <div class="col-md-1 col-md-offset-2">
     </div>
-   <div class="col-md-3 user_side">
+   <div class="col-md-3 user_side top-radius">
       <%= image_tag text_post.user.avatar.url(:thumb), :class => 'float-left' %>
-      <%= content_tag :small, text_post.user.bio %>
+      <%= content_tag :small, text_post.user.bio, :class => 'scrolling' %>
     </div>
     
 
@@ -51,7 +51,7 @@
     </div>
   
 
-    </div>
+   
   </div>
 
     

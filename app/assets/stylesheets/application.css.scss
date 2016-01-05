@@ -21,6 +21,7 @@ html, body {
 	font-family: 'Raleway', sans-serif;
 	text-decoration: none;
 	color: #23527C;
+
 }
 
 
@@ -397,3 +398,29 @@ margin-right: 1em;
 	margin-left: 20px;
 	margin-top: 20em;}
 */
+
+.scrolling {
+height: 100px;
+overflow-y: auto;
+width: 18.3em;
+
+}
+
+.scrolling2 {
+height: 100px;
+overflow-y: auto;
+width: 15.3em;
+
+}
+
+p {
+text-decoration: none;
+
+}
+
+.top-radius {
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+
+
+}
