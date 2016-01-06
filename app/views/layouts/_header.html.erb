@@ -39,7 +39,7 @@
 
 
 <ul class="nav navbar-right nav-fade">
-    <li><a><%= button_to("Sign out", destroy_user_session_path, id: "sign_out", :method => :delete, :class => "pull-right") if user_signed_in? %><a> </li>
+    <li><a><%= button_to("Sign out", destroy_user_session_path, :method => :delete, :class => "pull-right") if user_signed_in? %><a> </li>
 
 </ul>
 <li class="nav navbar-right">
