@@ -28,38 +28,48 @@
 </strong>
 
 
-<%= @text_posts.each_slice(3) do |text_posts| %>
-<div class="row">
-  <% text_posts.each do |text_post| %>
-     <%= div_for text_post do %>
-  
-   
-   <div class="col-md-4 user_side top-radius thinner">
+<%= @text_posts.each do |text_post| %>
+  <%= div_for text_post do %>
+  <div class="row">
+   <div class="col-md-1 col-md-offset-2">
+    </div>
+   <div class="col-md-3 user_side top-radius">
       <%= image_tag text_post.user.avatar.url(:thumb), :class => 'float-left' %>
-      <%= follow_link(text_post.user) %>
-      <%= content_tag :small, text_post.user.bio, :class => 'scrolling-tp' %>
-     
-      
-      <strong>
-        <%= "@" + text_post.user.name %>
-      </strong>
-      
+      <%= content_tag :small, text_post.user.bio, :class => 'scrolling' %>
+    </div>
+    
 
+      <div class="text_post_box col-md-3 col-md-offset-3  text_post_middle index1">
+    
+      <%= follow_link(text_post.user) %>
+   
+      <strong>
+        by user:<%= "@" + text_post.user.name %>
+      </strong>
       <h2 class="text-left">
         <%= text_post.name %>
       </h2>
 
       <article>
       <%= content_tag :p, text_post.description %>
-      </article>
+    </article>
 
     
   
 
+    </div>
+  
+
+   
+  </div>
+
+
+
+<div class="row">
+  <div class="col-md-5 text_post_box col-md-offset-3 text_post_lower index1">
     <span class="total-likes">
       <%= text_post.likes.count %>
     </span> 
-
     <div class="btn2">
      <%= form_for Like.new, :remote => true do |f| %>
      <%= f.hidden_field :likeable_type, :value => text_post.class %> 
@@ -67,19 +77,18 @@
      <%= f.hidden_field :user_id, :value => current_user.id %>
      <%= f.button "", :id => 'btn1', :class => 'fa fa-thumbs-up fa-2x' %>
     </div>
-
     <p>
     <%= link_to "Show", text_post_path(text_post) %> | 
     </p>
-   
- 
-      </div>
-      <% end %>
-<%# <%= content_tag :h2, text_post.description %>
+    </div>
+  </div>
+</div>
+
     <% end %>
+<%# <%= content_tag :h2, text_post.description %>
   <% end %>
 <% end %>
-  </div>
+</div>
 </div>
 
 
