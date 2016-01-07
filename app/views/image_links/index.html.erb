@@ -3,32 +3,28 @@
 <% end %>
 
 
-<% @image_links.each do |image_link| %>
-  <%= div_for image_link do %>
-    <div class="row">
-      
-      <div class="col-md-2 col-md-offset-4 user_side make-inline">
+<% @image_links.each_slice(2) do |image_links| %>
+<div class="row">
+  <% image_links.each do |image_link| %>
+      <%= div_for image_link do %>
+      <div class="col-md-2 user_side">
         <strong>by user:<%= "@" + image_link.user.name %>
         </strong>
         <%= image_tag image_link.user.avatar.url(:thumb), :class => 'float-left' %>
         <%= follow_link(image_link.user) %>
         <%= content_tag :small, image_link.user.bio %>
       </div>
-      <div class="text_post_upper col-md-3 col-md-offset-6 margin-pic"> 
-        <h2 class="text-left", style="display: block;"><%= image_link.title %></h2>
-      </div>
-    </div>
-
-
+      <div class="text_post_upper col-md-3 margin-pic"> 
+        <h2 class="text-left"><%= image_link.title %></h2>
+     
   
-  <div class="row">
-    <%= image_tag image_link.url, :class => 'image-link-image thumbnail col-md-offset-6', :id => 'centerimg' %>
-  </div>
+    <%= image_tag image_link.url, :class => 'image-link-image thumbnail'%>
+  
 <%# <% @image_links.each do |image_link| %>
  <%#  <%= content_tag :p, image_link.url %>
 <%# <% end %>
-  <div class="row">
-    <div class="col-md-1 text_post_box col-md-offset-6 text_post_lower index1">
+  
+      
       <span class="total-likes">
         <%= image_link.likes.count %>
       </span> 
@@ -43,8 +39,7 @@
         <p>
           <%= link_to "Show", image_link_path(image_link) %> | 
         </p> 
-    </div>
-  </div>
+   
 <!--
   <span class="text_post_lower col-md-offset-6">
   Published at
@@ -58,11 +53,15 @@
   -->
     <% end %>
   <% end %>
-<% end %>
 
+    <% end %>
+  <% end %>
+   
 </div>
 </div>
-
+</div>
+ </div>
+    </div>
 <!--
 
  <script>
