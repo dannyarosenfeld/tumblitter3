@@ -476,6 +476,11 @@ border-radius: 10px;
 	
 .margin-pic {
 margin-top: 10em;
+background: white;
+
+border-top-left-radius: 20px;
+border-top-right-radius: 20px;
+text-align: left;
 }
 
 }
@@ -488,3 +493,8 @@ margin-top: 10em;
 }
 
 
+.only-inline {
+display: inline-block
+
+
+}

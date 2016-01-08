@@ -3,22 +3,28 @@
 <% end %>
 
 
-<% @image_links.each_slice(2) do |image_links| %>
-<div class="row">
+<% @image_links.each_slice(4) do |image_links| %>
+    <div>
   <% image_links.each do |image_link| %>
       <%= div_for image_link do %>
-      <div class="col-md-2 user_side">
-        <strong>by user:<%= "@" + image_link.user.name %>
-        </strong>
-        <%= image_tag image_link.user.avatar.url(:thumb), :class => 'float-left' %>
-        <%= follow_link(image_link.user) %>
-        <%= content_tag :small, image_link.user.bio %>
-      </div>
-      <div class="text_post_upper col-md-3 margin-pic"> 
+      
+      <div class="col-md-3 width-img-links user_side top-radius"> 
+
+
+
         <h2 class="text-left"><%= image_link.title %></h2>
-     
-    <div class="thumbnail2">
+        <strong><%= "@" + image_link.user.name %>
+        </strong>
+        <%= image_tag image_link.user.avatar.url(:thumb), :class => 'float-left shrink-avatar' %>
+        <%= follow_link(image_link.user) %>
+        
+      
+
+      
+      
     <%= image_tag image_link.url, :class => 'image-link-image thumbnail'%>
+    <div class="bio-img-links">
+    <%= content_tag :small, image_link.user.bio, :class => 'bio-img-links' %>
     </div>
   
 <%# <% @image_links.each do |image_link| %>
@@ -52,6 +58,7 @@
     </p> 
 
   -->
+</div>
     <% end %>
   <% end %>
 

@@ -18,15 +18,34 @@ background: #36465d;
 .thumbnail {
  
 
-     max-width: 400px;
-    min-width: 400px;
-	max-height: 390px;
-  min-height: 390px;
+     max-width: 300px;
+    min-width: 300px;
+	max-height: 290px;
+  min-height: 290px;
 
 }
 
 
+.shrink-avatar {
+width: 3.4em;
+height: 3.4em;
 
+
+}
+
+.width-img-links {
+width: 330px;
+margin-left: 1em;
+margin-right: 1em;
+}
+
+.bio-img-links {
+
+height: 5em;
+overflow: auto;
+
+
+}
 
 
 
