@@ -26,6 +26,9 @@ html, body {
 }
 
 
+body{
+padding-top: 70px;
+} 
 
 
 h2 {
@@ -70,7 +73,7 @@ border-radius: 10px;
 
 .pure-white {
 	border-radius: 7px;
-	background:white;
+	background:#EEEEEE;
 }
 
 .date{
@@ -349,13 +352,19 @@ padding-right: 20px;
 }
 
 
+.dropboot {
+z-index:9995;
+
+
+}
+
 .text-left {
 text-align: left;
 }
 
 .blue_text {
 color: #9eafba;
-z-index: 9999;
+z-index: 9990;
 }
 
 .float-right {
