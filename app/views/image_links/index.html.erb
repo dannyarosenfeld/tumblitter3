@@ -1,28 +1,24 @@
 <% content_for :body do %>
-  <body id='image_links_index'>
+<body id='image_links_index'>
 <% end %>
 
-
+<div class="center-only">
 <% @image_links.each_slice(4) do |image_links| %>
-    <div>
+<div class="row margin-row">
   <% image_links.each do |image_link| %>
       <%= div_for image_link do %>
       
       <div class="col-md-3 width-img-links user_side top-radius"> 
-
-
-
-        <h2 class="text-left"><%= image_link.title %></h2>
+        
         <strong><%= "@" + image_link.user.name %>
         </strong>
         <%= image_tag image_link.user.avatar.url(:thumb), :class => 'float-left shrink-avatar' %>
         <%= follow_link(image_link.user) %>
         
-      
-
-      
+           
       
     <%= image_tag image_link.url, :class => 'image-link-image thumbnail'%>
+
     <div class="bio-img-links">
     <%= content_tag :small, image_link.user.bio, :class => 'bio-img-links' %>
     </div>
@@ -59,17 +55,15 @@
 
   -->
 </div>
-    <% end %>
+  <% end %>
   <% end %>
 
-    <% end %>
+  <% end %>
   <% end %>
    
 </div>
 </div>
 </div>
- </div>
-    </div>
 <!--
 
  <script>

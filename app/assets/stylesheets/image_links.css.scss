@@ -8,19 +8,24 @@ background: purple;
 
 }
 
+
+.center-only {
+
+width: 100em;
+margin: 0 auto;
+
+}
+
 #image_links_index {
 
 background: #36465d;
 
-
 }
 
 .thumbnail {
- 
-
-     max-width: 300px;
-    min-width: 300px;
-	max-height: 290px;
+  max-width: 300px;
+  min-width: 300px;
+	max-height: 500px;
   min-height: 290px;
 
 }
@@ -34,14 +39,16 @@ height: 3.4em;
 }
 
 .width-img-links {
-width: 330px;
-margin-left: 1em;
-margin-right: 1em;
+width: 310px;
+
+    
+    padding: 10px;
+  z-index: 99999;
 }
 
 .bio-img-links {
 
-height: 5em;
+
 overflow: auto;
 
 
@@ -60,6 +67,9 @@ overflow: auto;
 
 }
 
+
+
+
 #centerimg{
 
 
@@ -76,4 +86,10 @@ overflow: auto;
 .index2 {
 
 	z-index: 2;
+}
+
+.margin-row {
+margin-bottom: 10em;
+clear: left;
+
 }

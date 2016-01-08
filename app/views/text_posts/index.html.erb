@@ -27,7 +27,7 @@
   <%= link_to "New", new_text_post_path %>
 </strong>
 
-
+<div class="center-only">
 <%= @text_posts.each_slice(3) do |text_posts| %>
 <div class="row">
   <% text_posts.each do |text_post| %>
@@ -82,7 +82,7 @@
   </div>
 </div>
 
-
+</div>
 
 
 <script>
