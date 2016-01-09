@@ -8,11 +8,12 @@ class User < ActiveRecord::Base
   has_many :text_posts
   has_many :likes
 
+  
   validates :name, :presence => true, length: { maximum: 15, too_long: "%{count} characters max for your name please!" }
   validates :name, format: { with: /\A[a-zA-Z0-9]+\Z/, message: "no spaces please" }
   validates :username, :presence => true, :uniqueness => true, length: {maximum: 15, too_long: "%{count} characters max for your awesome handle."}
-  validates :bio, length: { maximum: 115, too_long: "Bruh listen %{count} characters is enough..." }
-
+  validates :bio, length: { maximum: 115, too_long: "%{count} characters is enough dude!" }
+  
   # Scope method to get all users except the one passed.
   #
   def self.all_except(user)

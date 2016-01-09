@@ -37,7 +37,7 @@
           <%= f.hidden_field :likeable_type, :value => image_link.class %>
           <%= f.hidden_field :likeable_id, :value => image_link.id %>
           <%= f.hidden_field :user_id, :value => current_user.id %>
-          <%= f.button "", :id => 'btn1', :class => 'fa fa-thumbs-up fa-2x' %>
+          <%= f.button "", :id => 'btn1', :class => 'fa fa-heart fa-2x' %>
       </div>
         <p>
           <%= link_to "Show", image_link_path(image_link) %> | 

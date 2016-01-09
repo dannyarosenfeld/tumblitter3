@@ -6,4 +6,7 @@ class TextPost < ActiveRecord::Base
     
     has_many :likes, as: :likeable
     
+    validates :name, length: { maximum: 31, too_long: "%{count} characters is enough dude!" }
+
+
 end
