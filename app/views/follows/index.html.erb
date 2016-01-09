@@ -16,13 +16,15 @@
 <%= image_tag user.avatar.url(:thumb) %> 
 </div>
 <div class="bio av-width scrolling2">
-    <%= content_tag :small, user.bio %>
+    <%= content_tag :small, user.bio, :class => 'float-left' %> 
 </div>
+<%= follow_link(user) %>
+
     <li class="av-width">
       <%# <%= content_tag :strong, user.name %>
       <%= content_tag :strong, "@"+user.username, :class => 'left80'%>
     </li>
-      <%= follow_link(user) %>
+      
     
     <hr>
   <% end %>
