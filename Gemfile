@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Declare the ruby version to use: http://bundler.io/v1.3/gemfile.html
-ruby '2.1.1'
+ruby '2.3.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.7'
@@ -51,7 +51,7 @@ gem 'devise'
 
 gem 'paperclip', github: 'thoughtbot/paperclip'
 
-
+gem 'aws-sdk', '< 2.0'
 
 
 group :development, :test do
