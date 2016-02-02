@@ -10,8 +10,6 @@ gem 'sprockets-rails', '2.1.3'
 # Use sqlite3 as the database for Active Record
 
 
-gem 'sqlite3'
-
 
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 
@@ -52,6 +50,17 @@ gem 'devise'
 gem 'paperclip', github: 'thoughtbot/paperclip'
 
  gem 'aws-sdk', '< 2.0'
+
+
+
+group :development do
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
 
 
 group :development, :test do
